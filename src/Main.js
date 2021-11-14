@@ -10,7 +10,7 @@ const data = [
     { year: 'Tuesday', earnings: 16500 },
     { year: 'Wednesday', earnings: 14250 },
     { year: 'Thursday', earnings: 19000 },
-    { year: 'Friday', earnings: 6969699 },
+    { year: 'Friday', earnings: 696969 },
     { year: 'Saturday', earnings: 14250 },
    ];
 
