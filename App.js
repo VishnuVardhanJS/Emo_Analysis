@@ -5,10 +5,11 @@ import { createStackNavigator, createAppContainer} from 'react-navigation';
 //screens
 import Splash from './src/Splash';
 import Main from './src/Main'
+import Analysis from './src/Analysis';
 
 const MainNavigator = createStackNavigator({
   Splash: { screen: Splash },
-  App: { screen: Main },
+  App: { screen: Analysis },
 }, {
   headerMode: 'none',
   navigationOptions: {
