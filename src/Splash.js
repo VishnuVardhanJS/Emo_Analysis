@@ -11,7 +11,7 @@ export default class Splash extends Component {
                         style={styles.anim}
                         source={require('../assets/SplashScreen/Splash.json')}
                         autoPlay
-                        speed= {1.3}
+                        speed= {1.5}
                         loop={false}
                         onAnimationFinish={() => {
                             console.log('Animation Finished!')

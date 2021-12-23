@@ -1,39 +1,39 @@
-import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
-import {GiftedChat} from 'react-native-gifted-chat'
+import React, { useState, useCallback, useEffect } from 'react'
+import { SafeAreaView } from 'react-native';
+import { GiftedChat } from 'react-native-gifted-chat'
 
-const botAvatar = require('../assets/Img/Botpic.png')
-const chatBot = {
-    _id: 2,
-    name: 'chatBot'
-    avatar: botAvatar
+const chat = () => {
+    const [messages, setMessages] = useState([]);
+
+    useEffect(() => {
+      setMessages([
+        {
+          _id: 1,
+          text: 'Hello World',
+          createdAt: new Date(),
+          user: {
+            _id: 2,
+            name: 'React Native',
+            avatar: 'https://placeimg.com/140/140/any',
+          },
+        },
+      ])
+    }, [])
+  
+    const onSend = useCallback((messages = []) => {
+      setMessages(previousMessages => GiftedChat.append(previousMessages, messages))
+    }, [])
+  
+    return (
+    
+      <GiftedChat
+        messages={messages}
+        onSend={messages => onSend(messages)}
+        user={{
+          _id: 1,
+        }}
+      />
+    )
 }
 
-export default class chat extends Component {
-    state = {
-        messages: [
-            {_id: 1, text: 'Hello!', createdAt: new Date(), user: chatBot}
-        ],
-        id: 1,
-        name: ''
-    }
-
-
-    render() {
-        return (
-            <View style={styles.chatbg}>
-                <GiftedChat 
-                    messages={this.state.messages}
-                    user={[_id: 1]}
-                />
-            </View>
-        )
-    }
-}
-
-const styles = StyleSheet.create({
-    chatbg: {
-        flex: 1,
-        backgroundColor: '#fff'
-    }
-})
+export default chat
