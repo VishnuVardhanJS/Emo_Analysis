@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react'
 import { Text, StyleSheet, View, } from 'react-native'
 import { TextInput } from 'react-native-gesture-handler';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 import Sentiment from 'sentiment'
 const sentiment = new Sentiment();
 
