@@ -1,6 +1,8 @@
 import React, { useState, useCallback, useEffect } from 'react'
 import { SafeAreaView } from 'react-native';
 import { GiftedChat } from 'react-native-gifted-chat'
+import Sentiment from 'sentiment'
+const sentiment = new Sentiment();
 
 const chat = () => {
     const [messages, setMessages] = useState([]);
@@ -22,6 +24,9 @@ const chat = () => {
   
     const onSend = useCallback((messages = []) => {
       setMessages(previousMessages => GiftedChat.append(previousMessages, messages))
+      const {text} = messages[0]
+      console.log(text)
+      console.log(sentiment.analyze(text).score)
     }, [])
   
     return (
