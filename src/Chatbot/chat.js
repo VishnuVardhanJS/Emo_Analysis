@@ -4,6 +4,7 @@ import { GiftedChat } from 'react-native-gifted-chat'
 import Sentiment from 'sentiment'
 const sentiment = new Sentiment();
 
+
 const Chat = () => {
     const [messages, setMessages] = useState([]);
 
@@ -16,7 +17,7 @@ const Chat = () => {
           user: {
             _id: 2,
             name: 'React Native',
-            avatar: 'https://placeimg.com/140/140/any',
+            avatar: 'https://imgkub.com/images/2022/02/17/pp.jpg',
           },
         },
       ])
