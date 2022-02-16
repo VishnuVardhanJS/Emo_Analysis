@@ -15,7 +15,7 @@ export default class Splash extends Component {
                         loop={false}
                         onAnimationFinish={() => {
                             console.log('Animation Finished!')
-                            this.props.navigation.replace('App');
+                            this.props.navigation.replace('chat');
                         }}
                     />
                 </View>

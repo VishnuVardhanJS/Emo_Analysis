@@ -1,10 +1,10 @@
 import React, { useState, useCallback, useEffect } from 'react'
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView, View } from 'react-native';
 import { GiftedChat } from 'react-native-gifted-chat'
 import Sentiment from 'sentiment'
 const sentiment = new Sentiment();
 
-const chat = () => {
+const Chat = () => {
     const [messages, setMessages] = useState([]);
 
     useEffect(() => {
@@ -30,15 +30,14 @@ const chat = () => {
     }, [])
   
     return (
-    
-      <GiftedChat
-        messages={messages}
-        onSend={messages => onSend(messages)}
-        user={{
-          _id: 1,
-        }}
-      />
+	    <View style={{flex:1, backgroundColor: '#f6e2bc'}} >
+	<GiftedChat
+		messages={messages}
+		onSend={messages => onSend(messages)}
+		user={{_id: 1,}}/>
+	</View>
+	
     )
 }
 
-export default chat
+export default Chat
