@@ -3,7 +3,7 @@ import { SafeAreaView, View } from 'react-native';
 import { GiftedChat } from 'react-native-gifted-chat'
 import Sentiment from 'sentiment'
 const sentiment = new Sentiment();
-
+const pp = require('../../assets/Img/pp.jpg')
 
 const Chat = () => {
     const [messages, setMessages] = useState([]);
@@ -17,7 +17,7 @@ const Chat = () => {
           user: {
             _id: 2,
             name: 'React Native',
-            avatar: 'https://imgkub.com/images/2022/02/17/pp.jpg',
+            avatar: pp,
           },
         },
       ])
@@ -27,18 +27,18 @@ const Chat = () => {
       setMessages(previousMessages => GiftedChat.append(previousMessages, messages))
       const {text} = messages[0]
       console.log(text)
-      console.log(sentiment.analyze(text).score)
+      console.log(sentiment.analyze(text).comparative)
     }, [])
   
-    return (
-	    <View style={{flex:1, backgroundColor: '#f6e2bc'}} >
+  return (
+	<SafeAreaView style={{flex:1, backgroundColor: '#f6e2bc'}} >
 	<GiftedChat
 		messages={messages}
+    showAvatarForEveryMessage={true}
 		onSend={messages => onSend(messages)}
 		user={{_id: 1,}}/>
-	</View>
-	
-    )
+	</SafeAreaView>
+	)
 }
 
 export default Chat
