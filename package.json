@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@react-native-community/cli-platform-android": "^7.0.1",
+    "@react-navigation/bottom-tabs": "^6.3.1",
     "@react-navigation/native": "^6.0.8",
     "@react-navigation/stack": "^6.1.1",
     "lottie-ios": "^3.2.3",
@@ -21,11 +22,8 @@
     "react-native-gifted-chat": "^0.16.3",
     "react-native-safe-area-context": "^3.4.0",
     "react-native-screens": "^3.11.1",
-    "react-native-shadow-cards": "^1.0.2",
-    "react-native-svg": "^12.1.1",
     "react-native-uuid": "^2.0.1",
-    "sentiment": "^5.0.2",
-    "victory-native": "^36.3.0"
+    "sentiment": "^5.0.2"
   },
   "devDependencies": {
     "@babel/core": "7.17.4",

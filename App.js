@@ -3,11 +3,12 @@ import { Text, View, Image, StyleSheet, SafeAreaView} from 'react-native'
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
+
 //screens
 import Splash from './src/Splash';
 import Main from './src/Main'
 import Analysis from './src/Analysis';
-import Chat from './src/Chatbot/Chat';
+import Chat from './src/Screens/Chat';
 
 
 const Stack = createStackNavigator();
@@ -23,9 +24,8 @@ const App = () => {
         />
         <Stack.Screen
           name="chat"
-          options={{animationEnabled: true, title: 'Chat Bot',
-		  headerStyle: {backgroundColor: '#f6e2bc'}}}
-          component={Chat}
+          options={{animationEnabled: true, header: () => null}}
+          component={Main}
         />
       </Stack.Navigator>
     </NavigationContainer>

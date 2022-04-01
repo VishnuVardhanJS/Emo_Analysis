@@ -37,7 +37,7 @@ const Chat = () => {
   function botResponse(){
     let qLst = ['How was your day today?', 'Are you Happy?', 'Did you greet higher authorities?', 
             'Did you have an good conversation today?', 'Were people nice to you today?', 'How was your meal today?',
-            'Did you sleep well?','How do you look today?', 'Did you exercise today?', 'Are you relaxed now?'
+            'Did you sleep well?','How do you look today?', 'How was the movie which you saw recently?', 'Are you relaxed now?'
             ]
             
     let rQ = qLst[Math.floor(Math.random()*qLst.length)]

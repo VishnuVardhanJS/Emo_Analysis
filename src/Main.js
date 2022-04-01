@@ -1,43 +1,40 @@
 import React, { Component } from 'react'
 import {Text, Image, Dimensions, SafeAreaView, StyleSheet, View} from 'react-native'
-import {Card} from 'react-native-shadow-cards'
-import {VictoryLine, VictoryChart, VictoryTheme} from 'victory-native'
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+import Chat from './Screens/Chat'
+import Rating from './Screens/Rating'
+import About from './Screens/About'
+const ChatBotIcon = require('../assets/Img/Chat.png')
+const RatingIcon = require('../assets/Img/Rating.png')
+const AboutIcon = require('../assets/Img/i.png')
+
+const Tab = createBottomTabNavigator()
 
 
-const data = [
-    { year: 'Sunday', earnings: 14250 },
-    { year: 'Monday', earnings: 13000 },
-    { year: 'Tuesday', earnings: 16500 },
-    { year: 'Wednesday', earnings: 14250 },
-    { year: 'Thursday', earnings: 19000 },
-    { year: 'Friday', earnings: 696969 },
-    { year: 'Saturday', earnings: 14250 },
-   ];
+export default function Main() {
+  return (
+      
+      <Tab.Navigator screenOptions={{tabBarShowLabel: false}}>
+        <Tab.Screen name='Chat' component={Chat} options={{
+            tabBarIcon: () => (<Image source={ChatBotIcon} style={style.AppIcon}/>)
+        }}/>
+        
 
-export default class Main extends Component {
-    render() {
-        return (
-            <View style={styles.layout}>
-                <Card style={styles.cards}>
-                    <VictoryChart width={Dimensions.get('window').width} height={250} theme={VictoryTheme.material}>
-                        <VictoryLine data={data} x="year" y="earnings"/>
-                    </VictoryChart>
-                </Card>    
-            </View>
-        )
-    }
+        <Tab.Screen name='Rating' component={Rating} options={{
+            tabBarIcon: () => (<Image source={RatingIcon} style={style.AppIcon}/>)
+        }}/>
+
+
+        <Tab.Screen name='About' component={About} options={{
+            tabBarIcon: () => (<Image source={AboutIcon} style={style.AppIcon}/>)
+        }}/>
+      </Tab.Navigator>
+  )
 }
 
-const styles = StyleSheet.create({
-    layout: {
-        flex: 1,
-        backgroundColor: '#f6e2bc', 
-    },
-    cards: {
-        margin: 20,
-        paddingLeft: 15,
-        paddingRight: 15,  
-        resizeMode: 'contain',
-    
+const style = StyleSheet.create({
+    AppIcon: {
+        width: 20,
+        height: 20,
     }
 })
