@@ -14,6 +14,7 @@ import Chat from './src/Screens/Chat';
 const Stack = createStackNavigator();
 
 const App = () => {
+
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Splash">
