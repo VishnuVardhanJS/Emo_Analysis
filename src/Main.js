@@ -17,29 +17,25 @@ export default function Main() {
     
       <Tab.Navigator screenOptions={{
           tabBarShowLabel: false, 
-          tabBarStyle: style.tabBar,
+          tabBarStyle: style.header,
           tabBarHideOnKeyboard: true,
         }}>
 
         <Tab.Screen name='Chat' component={Chat} options={{
             tabBarIcon: () => (<Image source={ChatBotIcon} style={style.AppIcon}/>),
             headerStyle: style.header,
-            tabBarStyle: {backgroundColor: '#f6e2bc', paddingHorizontal: 70}
         }}/>
         
 
         <Tab.Screen name='Rating' component={Rating} options={{
             tabBarIcon: () => (<Image source={RatingIcon} style={style.AppIcon}/>),
-            headerStyle: style.header,
-            tabBarStyle: [style.tabBar, {position: 'absolute'}]
-            
+            headerStyle: style.header,            
         }}/>
 
 
         <Tab.Screen name='About' component={About} options={{
             tabBarIcon: () => (<Image source={AboutIcon} style={style.AppIcon}/>),
-            headerStyle: style.header,
-            tabBarStyle: [style.tabBar, {position: 'absolute'}]
+            headerStyle: style.header,            
         }}/>
       </Tab.Navigator>
   )
@@ -50,13 +46,8 @@ const style = StyleSheet.create({
         width: 20,
         height: 20,
     },
-    tabBar: {
-        backgroundColor: '#f6e2bc',
-        borderRadius: 50,
-        marginHorizontal: 70,
-    },
     header: {
-        backgroundColor: '#f6e2bc'
+        backgroundColor: '#f6e2bc',
+
     }
-    
 })

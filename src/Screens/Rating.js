@@ -1,10 +1,17 @@
 import { View, Text, StyleSheet } from 'react-native'
-import React from 'react'
+import React, { useCallback } from 'react'
 
-export default function Rating() {
+
+
+export default function Rating({parentScore}) {
+
+  function setChanged(compScore) {
+    this.setState({ sentimentScore: compScore });
+  }
+
   return (
-    <View style={style.bg}>
-      <Text>This is Rating Screen</Text>
+    <View>
+    <Text>Sentiment Score: {parentScore}</Text>
     </View>
   )
 }

@@ -1,15 +1,25 @@
 import React, { useState, useCallback, useEffect } from 'react'
 import { SafeAreaView, View } from 'react-native';
-import { GiftedChat } from 'react-native-gifted-chat'
+import { GiftedChat, Bubble } from 'react-native-gifted-chat'
 import Sentiment from 'sentiment'
 import uuid from 'react-native-uuid'
+
+//Screens
+import Rating from './Rating'
+
+
 const sentiment = new Sentiment();
 const pp = require('../../assets/Img/pp.jpg')
-
 const Bot = {_id: 2, name: 'React Native', avatar: pp}
 
 const Chat = () => {
+
+  const [stateScore, setScore] = useState([])
   const [messages, setMessages] = useState([]);
+
+  useEffect(()=> {
+    console.log(stateScore)
+  }, [stateScore])
 
   useEffect(() => {
     setMessages([
@@ -45,14 +55,27 @@ const Chat = () => {
     return rQ;
   }
 
+  function addItem(Score){
+      setScore((prevState) => prevState.concat(Score))
+  }
+
   const onSend = useCallback((messages = []) => {
     setMessages(previousMessages => GiftedChat.append(previousMessages, messages))
     const text = messages[0].text
+    let compScore = sentiment.analyze(text).comparative
+    addItem(compScore)
     console.log(text)
-    console.log(sentiment.analyze(text).comparative)
+    console.log(compScore)
     sendBotResponse()
     
   }, [])
+
+  renderBubble = (props) => {
+    return(
+      <Bubble {...props} wrapperStyle={{ left: {backgroundColor: '#C8E3D4'}, 
+          right: {backgroundColor: '#87AAAA'}}}></Bubble>
+    )
+  }
   
   return (
 	<SafeAreaView style={{flex:1, backgroundColor: '#f6e2bc'}} >
@@ -60,8 +83,9 @@ const Chat = () => {
 		messages={messages}
     showAvatarForEveryMessage={true}
 		onSend={messages => onSend(messages)}
-		user={{_id: 1,}}/>
-	</SafeAreaView>
+		user={{_id: 1,}}
+    renderBubble= {this.renderBubble}/>
+	</SafeAreaView> 
 	)
 }
 
