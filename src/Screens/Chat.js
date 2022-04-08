@@ -1,25 +1,21 @@
-import React, { useState, useCallback, useEffect } from 'react'
+import React, { useState, useCallback, useEffect, useContext} from 'react'
 import { SafeAreaView, View } from 'react-native';
 import { GiftedChat, Bubble } from 'react-native-gifted-chat'
 import Sentiment from 'sentiment'
 import uuid from 'react-native-uuid'
-
-//Screens
-import Rating from './Rating'
-
+import {setStates} from '../States'
 
 const sentiment = new Sentiment();
 const pp = require('../../assets/Img/pp.jpg')
 const Bot = {_id: 2, name: 'React Native', avatar: pp}
 
 const Chat = () => {
-
-  const [stateScore, setScore] = useState([])
+  const conState = useContext(setStates)
   const [messages, setMessages] = useState([]);
 
   useEffect(()=> {
-    console.log(stateScore)
-  }, [stateScore])
+    console.log(conState.Score)
+  }, [conState.Store])
 
   useEffect(() => {
     setMessages([
@@ -55,8 +51,9 @@ const Chat = () => {
     return rQ;
   }
 
-  function addItem(Score){
-      setScore((prevState) => prevState.concat(Score))
+  function addItem(funcScore){
+      //conState.setScore((prevState) => prevState.concat(funcScore))
+      conState.setScore(funcScore)
   }
 
   const onSend = useCallback((messages = []) => {

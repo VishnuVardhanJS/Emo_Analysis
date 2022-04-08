@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Text, Image, Dimensions, SafeAreaView, StyleSheet, View} from 'react-native'
+import {Text, Image, Dimensions, StyleSheet, View} from 'react-native'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 
 //Resources
@@ -14,30 +14,30 @@ const Tab = createBottomTabNavigator()
 
 export default function Main() {
   return (
+    <Tab.Navigator screenOptions={{
+        tabBarShowLabel: false, 
+        tabBarStyle: style.header,
+        tabBarHideOnKeyboard: true,
+    }}>
+
+    <Tab.Screen name='Chat' component={Chat} options={{
+        tabBarIcon: () => (<Image source={ChatBotIcon} style={style.AppIcon}/>),
+        headerStyle: style.header,
+    }}/>
+
+
+    <Tab.Screen name='Rating' component={Rating} options={{
+        tabBarIcon: () => (<Image source={RatingIcon} style={style.AppIcon}/>),
+        headerStyle: style.header,            
+    }}/>
+
+
+    <Tab.Screen name='About' component={About} options={{
+        tabBarIcon: () => (<Image source={AboutIcon} style={style.AppIcon}/>),
+        headerStyle: style.header,            
+    }}/>
+    </Tab.Navigator>
     
-      <Tab.Navigator screenOptions={{
-          tabBarShowLabel: false, 
-          tabBarStyle: style.header,
-          tabBarHideOnKeyboard: true,
-        }}>
-
-        <Tab.Screen name='Chat' component={Chat} options={{
-            tabBarIcon: () => (<Image source={ChatBotIcon} style={style.AppIcon}/>),
-            headerStyle: style.header,
-        }}/>
-        
-
-        <Tab.Screen name='Rating' component={Rating} options={{
-            tabBarIcon: () => (<Image source={RatingIcon} style={style.AppIcon}/>),
-            headerStyle: style.header,            
-        }}/>
-
-
-        <Tab.Screen name='About' component={About} options={{
-            tabBarIcon: () => (<Image source={AboutIcon} style={style.AppIcon}/>),
-            headerStyle: style.header,            
-        }}/>
-      </Tab.Navigator>
   )
 }
 

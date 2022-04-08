@@ -1,24 +1,29 @@
 import { View, Text, StyleSheet } from 'react-native'
-import React, { useCallback } from 'react'
+import React, { useState, useCallback, useEffect, useContext } from 'react'
+
+import { setStates } from '../States'
 
 
-
-export default function Rating({parentScore}) {
-
-  function setChanged(compScore) {
-    this.setState({ sentimentScore: compScore });
-  }
-
+export default function Rating() {
+  const conState = useContext(setStates)
   return (
-    <View>
-    <Text>Sentiment Score: {parentScore}</Text>
+    <View style={style.bg} >
+    <Text style={style.text} >Sentiment Score: {conState.Score}</Text>
     </View>
   )
+  
 }
+
 
 const style = StyleSheet.create({
   bg: {
     backgroundColor: '#f6e2bc',
-    flex: 1
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  text: {
+    fontSize: 18,
+    fontWeight: 'bold'
   }
 })
