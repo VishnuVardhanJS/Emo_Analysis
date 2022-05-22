@@ -4,7 +4,6 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 
-
 //screens
 import Splash from './src/Splash';
 import Main from './src/Main'
