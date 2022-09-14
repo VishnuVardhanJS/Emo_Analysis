@@ -27,9 +27,9 @@ A sentiment analysis chatbot which gives out sentiments scores according to the 
 * wait for it to build and then the app is useable on AVD or connected phone
 
 ### Images
-![Image1](https://raw.githubusercontent.com/VishnuVardhanJS/Kollab/main/Screenshots/1.jpg)
-![Image2](https://raw.githubusercontent.com/VishnuVardhanJS/Kollab/main/Screenshots/2.jpg)
-![Image3](https://raw.githubusercontent.com/VishnuVardhanJS/Kollab/main/Screenshots/3.jpg)
-![Image4](https://raw.githubusercontent.com/VishnuVardhanJS/Kollab/main/Screenshots/4.jpg)
-![Image5](https://raw.githubusercontent.com/VishnuVardhanJS/Kollab/main/Screenshots/5.jpg)
+![Image1](https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/Splash%20Screen.jpg?raw=true)
+![Image2](https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/ChatBot.jpg?raw=true)
+![Image3](https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/Score.jpg?raw=true)
+![Image4](https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/About.jpg?raw=true)
+
 
