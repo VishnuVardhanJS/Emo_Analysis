@@ -26,6 +26,11 @@ A sentiment analysis chatbot which gives out sentiments scores according to the 
 * react-native run-android
 * wait for it to build and then the app is useable on AVD or connected phone
 
+
+<img alt="Splash Screen" src="https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/Splash%20Screen.jpg?raw=true" width="50%">               <img alt="ChatBot" src="https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/ChatBot.jpg?raw=true" width="50%"> 
+<img alt="Score" src="https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/Score.jpg?raw=true" width="50%"> 
+<img alt="About" src="https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/About.jpg?raw=true" width="50%"> 
+
 ### Images
 ![Image1](https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/Splash%20Screen.jpg?raw=true)
 ![Image2](https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/ChatBot.jpg?raw=true)
