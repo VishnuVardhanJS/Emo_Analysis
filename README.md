@@ -1,4 +1,4 @@
-# Kollab
+# Emo Analysis
 
 Sentiment Analysis Chatbot with React Native
 
