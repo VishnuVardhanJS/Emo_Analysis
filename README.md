@@ -28,8 +28,8 @@ A sentiment analysis chatbot which gives out sentiments scores according to the 
 
 ### Images
 
-<img alt="Splash Screen" src="https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/Splash%20Screen.jpg?raw=true" width="10%"> <img alt="ChatBot" src="https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/ChatBot.jpg?raw=true" width="10%"> 
-<img alt="Score" src="https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/Score.jpg?raw=true" width="10%"> <img alt="About" src="https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/About.jpg?raw=true" width="10%"> 
+<img alt="Splash Screen" src="https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/Splash%20Screen.jpg?raw=true" width="20%"> <img alt="ChatBot" src="https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/ChatBot.jpg?raw=true" width="20%"> 
+<img alt="Score" src="https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/Score.jpg?raw=true" width="20%"> <img alt="About" src="https://github.com/VishnuVardhanJS/Emo_Analysis/blob/VishnuVardhanJS-patch-1/About.jpg?raw=true" width="20%"> 
 
 
 
